@@ -1,0 +1,33 @@
+<%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => { :multipart => true } do |f| %>
+	<br/>
+     <p id="notice"><%= notice %></p>
+		<span id="upload_title">Click on "Choose Files" to upload your translation(s) for: "<%= File.basename(@photo.photo_file.url).to_s %>"</span>
+		<br/>
+		<span id="upload_warning" class="warning"></span>
+		<br/>		 
+          <input id="fileupload" type="file" name="avatar[avatar_file]" multiple>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+          <script src="/jquery-file-upload/vendor/jquery.ui.widget.js"></script>
+          <script src="/jquery-file-upload/jquery.iframe-transport.js"></script>
+          <script src="/jquery-file-upload/jquery.fileupload.js"></script>
+          <script>
+          $(function () {
+              $('#fileupload').fileupload({
+                  dataType: 'json',
+                  url: '<%= gallery_photo_avatars_path(@photo) %>',
+                  done: function (e, data) {
+                      $.each(data.result, function (index, file) {
+                         $('<li><img src="'+file.thumbnail_url+'"></li>').appendTo('#thumbs');
+                      });
+                  }
+              });
+          });
+         
+          </script>
+
+          </br>
+          </br>
+          <div id="flash_msg" class="cf">
+     <!-- json-ajax response here, see fileupload script above, .appendTo css id:"thumbs"-->
+          </div>
+<% end %>

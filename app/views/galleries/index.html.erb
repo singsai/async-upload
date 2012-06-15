@@ -1,0 +1,34 @@
+<h1>Admin Home</h1>
+<!-- <h1>Home</h1> --><br/>
+Note: Destroying a list will also destroy all original files and translations associated with those files. BE CAREFUL.<br/>
+<table>
+  <tr>
+    <th><%= link_to 'Create a new Audio File List', new_gallery_path %>
+	<br/></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<br>
+<% @galleries.each do |gallery| %>
+<tr>
+  <td><strong><%= link_to gallery.name, gallery_path(gallery.id) %><strong></td>
+  <td><%= link_to 'Edit List', edit_gallery_path(gallery) %></td>
+  <td><%= link_to 'Destroy List', gallery, confirm: 'Are you sure?', method: :delete %></td>
+</tr>
+<% end %>
+</table>
+
+</br>
+ 
+<% if no_gallery? then %>
+	<section>
+		</br>
+		<p><p>
+	</section>
+<% else %>
+	<section>
+		</br>
+		<p><p>
+	</section>
+<% end %>

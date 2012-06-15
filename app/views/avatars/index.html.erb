@@ -1,0 +1,38 @@
+<h1><%= File.basename(@photo.photo_file.url).to_s %></h1>
+<br />
+<!--BEGIN TRANSLATOR CODE-->
+<!--%= link_to 'To translate this file, click here',"http://plingdemo.herokuapp.com/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/new" %-->
+<!--END TRANSLATOR CODE-->
+<br/>
+<% if @avatars.count > 0 %>
+	<!--h3>Click on a translation's name to edit it</h3-->
+<% else %>
+	There are no translations for this file.
+<% end %>
+<div id="gallery">
+  <ul>
+    <% @avatars.each do |pic| %>
+     <li><%= File.basename(pic.avatar_file.url) %> | <%= link_to "Edit", "http://stark-planet-7735.herokuapp.com/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/#{pic.id}" %> | <%= link_to "Download", pic.avatar_file.url %></li> 
+    <% end %>
+  </ul>
+</div>
+
+<!--p>This is Photos (Index Action) page. To view/edit a photo, hover over and click on the thumbnail.<p-->
+<%= debug(params) if Rails.env.development? %>
+<!-- gallery_photo_avatar_path(@photo, pic)  -->
+
+<!-- 
+WARNING:
+Change all references of LOCALHOST:3000
+to
+Correct Heroku URL:
+Translator's is: 
+	http://plingdemo.herokuapp.com/
+
+Client's is:
+	http://palmlingclient.herokuapp.com
+
+
+This got mixed params too:
+new_gallery_photo_avatar_path(@photo)
+ -->

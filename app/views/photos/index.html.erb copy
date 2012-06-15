@@ -1,0 +1,17 @@
+<h1>Audio Files:	<%= @gallery.name %></h1>
+<br />
+
+<!--p>This is Photos (Index Action) page. To view/edit a photo, hover over and click on the thumbnail.<p-->
+
+<br />
+<%= link_to 'Back', gallery_path(@gallery) %> |
+<%= link_to 'Upload File', new_gallery_photo_path(@gallery) %>
+<br />
+<div id="gallery">
+  <ul>
+    <% @photos.each do |pic| %>
+     <li><%= link_to File.basename(pic.photo_file.url), pic.photo_file.url.to_s %> | <%= link_to 'Translate', gallery_photo_avatars_path(@gallery,pic)  %></li> 
+    <% end %>
+  </ul>
+</div>
+<%= debug(params) if Rails.env.development? %>

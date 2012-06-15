@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+<h1><%= @gallery.name %></h1>
+	<br>
+</p>
+
+<p>Click on the link to get started<p>
+
+</br>
+
+<% if @gallery.at_least_one_photo? %> 
+	<%= link_to 'View a list of files that need to be translated', gallery_photos_path(@gallery) %> <br/><br/>
+	
+<% end %>
+<!-- BEGIN CLIENT CODE -->
+<%= link_to 'Upload files that you need translated', new_gallery_photo_path(@gallery) %>
+<!-- END CLIENT CODE -->
+<br/><br/>
+<!--%= link_to 'Back', galleries_path %-->

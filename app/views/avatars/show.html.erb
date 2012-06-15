@@ -1,0 +1,9 @@
+<%= File.basename(@photo.photo_file.url).to_s %><br/><br/>
+<%= link_to "Delete File", "http://stark-planet-7735.herokuapp.com/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/#{@avatar.id}", :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn' %>
+<!-- 
+This won't work for me:
+File.basename(@avatar.avatar_file.url).to_s
+
+This screws up the photo number, replacing photo id with avatar id
+gallery_photo_avatar_path(@photo, @avatar)
+-->

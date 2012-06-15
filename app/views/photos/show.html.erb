@@ -1,0 +1,13 @@
+
+</br>
+<br>
+<p id="notice"><%= notice %></p>
+
+<%= link_to @photo.photo_file.url.to_s, gallery_photo_path(@gallery,@photo) %>
+</br></br>
+<%= link_to "Delete File", gallery_photo_path(@gallery, @photo), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn' %> |
+<%= link_to 'Back', gallery_photos_path %>
+
+<!-- 
+@gallery.name, Photo:  @photo.photo_file
+-->

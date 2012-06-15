@@ -1,0 +1,29 @@
+<h1><%= @gallery.name %></h1>
+<br />
+<!--p>This is Photos (Index Action) page. To view/edit a photo, hover over and click on the thumbnail.<p-->
+<br />
+<!--link_to 'Back', gallery_path(@gallery)--> 
+<!--
+THIS LINK IS ONLY FOR CLIENTS
+%= link_to 'Click here to upload more files that need to be translated', new_gallery_photo_path(@gallery) %-->
+
+<p>Below is a list of files that need to be translated. 
+<br/> 
+<!--br/>To translate a file, click "Translate this file"</p-->
+<br /><br />
+<h3>List of all files that need to be translated:</h3>
+<div id="gallery">
+  <ul>
+    <% @photos.each do |pic| %>
+     <li><%= File.basename(pic.photo_file.url) %> | <%= link_to "Download", pic.photo_file.url.to_s %> <!--%= File.basename(pic.photo_file.url) %--> | <%= link_to "Edit", gallery_photo_path(@gallery, pic) %> | <%= link_to "View Translations", gallery_photo_avatars_path(@gallery,pic) %> | <%= link_to 'Translate this file', new_gallery_photo_avatar_path(@gallery,pic) %><!--%= link_to "show", gallery_photo_path(@gallery, pic) %--> </li> 
+    <% end %>
+  </ul>
+</div>
+<!--
+This was the very indirect link before to "translate this"
+link_to 'Old Translate this file', gallery_photo_avatars_path(@gallery,pic)
+
+ 
+-->
+<!--%= link_to 'What the hell is this shiz...ahh wrong # of arguments', gallery_photo_avatars_path(@gallery) %-->
+<%= debug(params) if Rails.env.development? %>
