@@ -22,7 +22,10 @@ class AvatarsController < ApplicationController
     @avatar = @photo.avatars.new(params[:avatar])
     
     if @avatar.save
-      redirect_to @avatar   
+      redirect_to "#{HOST_URL}/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars"
+      #redirect_to @avatar  
+      #Note: @avatar works with the jQuery mass uploader, but not the conventional solo upload form,
+      #because @photo_id goes missing
     else
       render :json => { "errors" => @avatar.errors } 
     end
@@ -34,7 +37,7 @@ class AvatarsController < ApplicationController
     @avatar.destroy
 
     respond_to do |format|
-      format.html { redirect_to "http://plingdemo-admin.herokuapp.com/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/new" }
+      format.html { redirect_to "#{HOST_URL}/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/new" }
       #redirect_to new_gallery_photo_avatar_path(@photo) mixed up id's again
       format.json { head :no_content }      
     end

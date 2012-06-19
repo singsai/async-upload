@@ -1,22 +1,13 @@
-1. <%= link_to "Click here to download #{File.basename(@photo.photo_file.url).to_s}", @photo.photo_file.url.to_s %><br/>
-2. Listen to the file, typing in your notes in the field below if you need to. (Your notes won't be saved.)<br/>
-3. Record your translation in an .mp3 or .wav file.<br/>
-4. Upload your file by clicking on "Choose Files" (below).
-<!--File.basename(@photo.photo_file.url).to_s-->
-<br/>
-<%= text_area_tag "notes", "Type your notes here. Note: this will not be saved." %>
-<%= render 'form' %>
-<span id="view_your_file" style="display:inline;">
-	<%= link_to "Click here to see your translations", gallery_photo_avatars_path(@gallery)  %>
-</span>
-<%= debug(params) if Rails.env.development? %>
-<!-- 
+<%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => {:multipart => true} do |f| %>
+  <p>
+    <label>My Avatar</label>
+    <%= image_tag(@avatar.avatar_url) if @avatar.avatar_file? %>
+    <%= f.file_field :avatar_file %>
+  </p>
 
-This would work if frickin @avatar weren't nil. 
-How do I retrieve the latest @avatar so that this link can get built dynamically?
-link_to gallery_photo_avatar_path(@photo, @avatar)
-
-The parameters begin getting effed up at this level of nested routing, so right now "gallery_id" gets the value of photo_id and mucks up some shiz...
-Taking this link away for now, as the interpreter doesn't need to see it anywayz.
-link_to 'View all translations for this raw file', gallery_photo_avatars_path(@photo) 
--->
+  <p>
+    <label>
+    </label>
+  </p>
+	<%= f.submit "Upload file", class: "btn btn-large btn-primary" %>	
+<% end %>

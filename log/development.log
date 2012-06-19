@@ -62404,3 +62404,1422 @@ ActionController::RoutingError (No route matches [GET] "/admin/translators/2/edi
 
   Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (73.0ms)
 Errno::EIO: Input/output error - <STDERR>: rollback transaction
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 08:56:31 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (3.1ms)
+Compiled everyday.css  (0ms)  (pid 4263)
+Compiled application.css  (32ms)  (pid 4263)
+Compiled jquery.js  (1ms)  (pid 4263)
+Compiled jquery_ujs.js  (0ms)  (pid 4263)
+Compiled application.js  (68ms)  (pid 4263)
+  Rendered pages/_pages_navigation.html.erb (1.2ms)
+Completed 200 OK in 232ms (Views: 232.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:32 -0600
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:32 -0600
+Served asset /everyday.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:32 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:32 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:32 -0600
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 08:56:35 -0600
+Processing by GalleriesController#index as HTML
+  [1m[36mGallery Load (16.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" [0m
+  [1m[35mGallery Load (0.1ms)[0m  SELECT "galleries".* FROM "galleries" LIMIT 1
+  Rendered galleries/index.html.erb within layouts/application (6.2ms)
+  Rendered galleries/_galleries_navigation.erb (0.7ms)
+Completed 200 OK in 117ms (Views: 13.3ms | ActiveRecord: 32.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:36 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:36 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/3" for 127.0.0.1 at 2012-06-19 08:56:41 -0600
+Processing by GalleriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGallery Load (0.3ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mPhoto Load (0.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."gallery_id" = 3
+  Rendered galleries/show.html.erb within layouts/application (157.3ms)
+  Rendered galleries/_galleries_navigation.erb (0.3ms)
+Completed 200 OK in 165ms (Views: 162.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:41 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:41 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:41 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/3/photos" for 127.0.0.1 at 2012-06-19 08:56:45 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"3"}
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (gallery_id = 3)[0m
+  Rendered photos/index.html.erb within layouts/application (36.7ms)
+  Rendered photos/_photos_navigation.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:45 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:45 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 08:56:55 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (0.3ms)
+  Rendered pages/_pages_navigation.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:55 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 08:56:56 -0600
+Processing by GalleriesController#index as HTML
+  [1m[35mGallery Load (0.2ms)[0m  SELECT "galleries".* FROM "galleries" 
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" LIMIT 1[0m
+  Rendered galleries/index.html.erb within layouts/application (3.5ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:56 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:56 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:56 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/new" for 127.0.0.1 at 2012-06-19 08:56:57 -0600
+Processing by GalleriesController#new as HTML
+  Rendered galleries/_form.html.erb (124.2ms)
+  Rendered galleries/new.html.erb within layouts/application (133.8ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 215ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:56:57 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:57 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:56:57 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries" for 127.0.0.1 at 2012-06-19 08:57:01 -0600
+Processing by GalleriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "gallery"=>{"name"=>"Local"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mGallery Exists (0.2ms)[0m  [1mSELECT 1 FROM "galleries" WHERE "galleries"."name" = 'Local' LIMIT 1[0m
+  [1m[35mSQL (32.4ms)[0m  INSERT INTO "galleries" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 19 Jun 2012 14:57:01 UTC +00:00], ["name", "Local"], ["updated_at", Tue, 19 Jun 2012 14:57:01 UTC +00:00]]
+  [1m[36m (17.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/galleries
+Completed 302 Found in 141ms (ActiveRecord: 49.8ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 08:57:01 -0600
+Processing by GalleriesController#index as HTML
+  [1m[35mGallery Load (0.2ms)[0m  SELECT "galleries".* FROM "galleries" 
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" LIMIT 1[0m
+  Rendered galleries/index.html.erb within layouts/application (4.4ms)
+  Rendered galleries/_galleries_navigation.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:57:01 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:01 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:01 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8" for 127.0.0.1 at 2012-06-19 08:57:04 -0600
+Processing by GalleriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mGallery Load (0.1ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."gallery_id" = 8[0m
+  Rendered galleries/show.html.erb within layouts/application (1.4ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:57:04 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:04 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:04 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/new" for 127.0.0.1 at 2012-06-19 08:57:05 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[35mGallery Load (0.1ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered photos/new.html.erb within layouts/application (27.3ms)
+  Rendered photos/_photos_navigation.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:57:06 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:06 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:06 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 08:57:18 -0600
+Processing by PhotosController#create as JSON
+  Parameters: {"utf8"=>"✓", "photo"=>{"photo_file"=>#<ActionDispatch::Http::UploadedFile:0x007fe234c2d260 @original_filename="bgpJ3l6XHzut(1).mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"photo[photo_file]\"; filename=\"bgpJ3l6XHzut(1).mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-cu5ps5>>}, "gallery_id"=>"8"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "photos" ("created_at", "gallery_id", "photo_file", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 19 Jun 2012 14:57:18 UTC +00:00], ["gallery_id", 8], ["photo_file", "bgpJ3l6XHzut_1_.mp3"], ["updated_at", Tue, 19 Jun 2012 14:57:18 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  Rendered photos/create.json.jbuilder (22.4ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (Version thumb doesn't exist!):
+  app/views/photos/create.json.jbuilder:22:in `block (2 levels) in _app_views_photos_create_json_jbuilder___2400683013519241799_70304760986580'
+  app/views/photos/create.json.jbuilder:17:in `block in _app_views_photos_create_json_jbuilder___2400683013519241799_70304760986580'
+  app/views/photos/create.json.jbuilder:14:in `_app_views_photos_create_json_jbuilder___2400683013519241799_70304760986580'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.1ms)
+
+
+Started GET "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 08:57:22 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (gallery_id = 8)[0m
+  Rendered photos/index.html.erb within layouts/application (2.3ms)
+  Rendered photos/_photos_navigation.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:57:22 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:22 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:57:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 08:57:32 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `avatars_path' for #<#<Class:0x0000010cb62788>:0x007fe234c38bd8>):
+    1: <%= form_for @avatar, :html => {:multipart => true} do |f| %>
+    2:   <p>
+    3:     <label>My Avatar</label>
+    4:     <%= image_tag(@avatar.avatar_url) if @avatar.avatar? %>
+  app/views/avatars/new.html.erb:1:in `_app_views_avatars_new_html_erb___1387265638586082170_70304761094520'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 08:59:11 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `avatar?' for #<Avatar:0x007fe23483c2a0>):
+    1: <%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => {:multipart => true} do |f| %>
+    2:   <p>
+    3:     <label>My Avatar</label>
+    4:     <%= image_tag(@avatar.avatar_url) if @avatar.avatar? %>
+    5:     <%= f.file_field :avatar %>
+    6:   </p>
+    7: 
+  app/views/avatars/new.html.erb:4:in `block in _app_views_avatars_new_html_erb___1387265638586082170_70304750449620'
+  app/views/avatars/new.html.erb:1:in `_app_views_avatars_new_html_erb___1387265638586082170_70304750449620'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 08:59:12 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `avatar?' for #<Avatar:0x007fe234eda530>):
+    1: <%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => {:multipart => true} do |f| %>
+    2:   <p>
+    3:     <label>My Avatar</label>
+    4:     <%= image_tag(@avatar.avatar_url) if @avatar.avatar? %>
+    5:     <%= f.file_field :avatar %>
+    6:   </p>
+    7: 
+  app/views/avatars/new.html.erb:4:in `block in _app_views_avatars_new_html_erb___1387265638586082170_70304750449620'
+  app/views/avatars/new.html.erb:1:in `_app_views_avatars_new_html_erb___1387265638586082170_70304750449620'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 08:59:29 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `remove_avatar' for #<Avatar:0x0000010ccb0360>):
+    7: 
+    8:   <p>
+    9:     <label>
+    10:       <%= f.check_box :remove_avatar %>
+    11:       Remove avatar
+    12:     </label>
+    13:   </p>
+  app/views/avatars/new.html.erb:10:in `block in _app_views_avatars_new_html_erb___1387265638586082170_2254811220'
+  app/views/avatars/new.html.erb:1:in `_app_views_avatars_new_html_erb___1387265638586082170_2254811220'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.5ms)
+  Rendered avatars/_avatars_navigation.erb (2.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 08:59:43 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Processing by GalleriesController#index as HTML
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" [0m
+  [1m[35mGallery Load (0.2ms)[0m  SELECT "galleries".* FROM "galleries" LIMIT 1
+  Rendered galleries/index.html.erb within layouts/application (31.3ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Processing by GalleriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."gallery_id" = 8
+  Rendered galleries/show.html.erb within layouts/application (1.5ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:19 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (gallery_id = 8)[0m
+  Rendered photos/index.html.erb within layouts/application (2.1ms)
+  Rendered photos/_photos_navigation.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:21 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (14.6ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (18.0ms)
+  Rendered avatars/_avatars_navigation.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 79.3ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:00:23 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (1.4ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:30 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (2.0ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:01:36 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:01:50 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fe23295e388 @original_filename="mail.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar]\"; filename=\"mail.mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-fa36z2>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: avatar):
+  app/controllers/avatars_controller.rb:22:in `create'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:02:28 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fe241bd2da8 @original_filename="mail.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar]\"; filename=\"mail.mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-1py1f7d>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: avatar):
+  app/controllers/avatars_controller.rb:22:in `create'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.7ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:02:33 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:02:46 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar_file"=>#<ActionDispatch::Http::UploadedFile:0x007fe234b2a778 @original_filename="mail.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar_file]\"; filename=\"mail.mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-1nf9y36>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "avatars" ("avatar_file", "created_at", "notes", "photo_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["avatar_file", "mail.mp3"], ["created_at", Tue, 19 Jun 2012 15:02:46 UTC +00:00], ["notes", nil], ["photo_id", 36], ["updated_at", Tue, 19 Jun 2012 15:02:46 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 13ms
+
+NoMethodError (undefined method `avatar_url' for #<AvatarsController:0x007fe234b2b128>):
+  app/controllers/avatars_controller.rb:25:in `create'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:03:44 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (2.3ms)
+  Rendered avatars/_avatars_navigation.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:03:45 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:03:45 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:03:45 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:03:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:03:45 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.1ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:07:49 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:08:08 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar_file"=>#<ActionDispatch::Http::UploadedFile:0x007fe231dc3f00 @original_filename="RPL4GUTZHqdg.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar_file]\"; filename=\"RPL4GUTZHqdg.mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-igfpmt>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (12.9ms)[0m  [1mINSERT INTO "avatars" ("avatar_file", "created_at", "notes", "photo_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["avatar_file", "RPL4GUTZHqdg.mp3"], ["created_at", Tue, 19 Jun 2012 15:08:08 UTC +00:00], ["notes", nil], ["photo_id", 36], ["updated_at", Tue, 19 Jun 2012 15:08:08 UTC +00:00]]
+  [1m[35m (11.6ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 37ms
+
+NoMethodError (undefined method `avatar_url' for #<AvatarsController:0x007fe231dbf180>):
+  app/controllers/avatars_controller.rb:25:in `create'
+
+
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/crazyfarm/.rvm/gems/ruby-1.9.3-p194@pling/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)[0m
+  [1m[35mAvatar Load (0.1ms)[0m  SELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)
+  Rendered avatars/index.html.erb within layouts/application (2.7ms)
+  Rendered avatars/_avatars_navigation.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:11:05 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 09:14:50 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (0.6ms)
+  Rendered pages/_pages_navigation.html.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:51 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:51 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:51 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:51 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Processing by GalleriesController#index as HTML
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" [0m
+  [1m[35mGallery Load (0.1ms)[0m  SELECT "galleries".* FROM "galleries" LIMIT 1
+  Rendered galleries/index.html.erb within layouts/application (5.2ms)
+  Rendered galleries/_galleries_navigation.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:52 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Processing by GalleriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."gallery_id" = 8
+  Rendered galleries/show.html.erb within layouts/application (16.0ms)
+  Rendered galleries/_galleries_navigation.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:53 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[36mGallery Load (0.1ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (gallery_id = 8)[0m
+  Rendered photos/index.html.erb within layouts/application (3.4ms)
+  Rendered photos/_photos_navigation.erb (0.7ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (7.8ms)
+  Rendered avatars/_avatars_navigation.erb (0.5ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:14:57 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[35mGallery Load (0.1ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (gallery_id = 8)
+  Rendered photos/index.html.erb within layouts/application (2.2ms)
+  Rendered photos/_photos_navigation.erb (0.7ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:04 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)[0m
+  [1m[35mAvatar Load (0.1ms)[0m  SELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)
+  Rendered avatars/index.html.erb within layouts/application (2.4ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:05 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (1.8ms)
+  Rendered avatars/_avatars_navigation.erb (0.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:09 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:15:22 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar_file"=>#<ActionDispatch::Http::UploadedFile:0x007fe241a81f58 @original_filename="2Pac_-_101_-_Intro (1).mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar_file]\"; filename=\"2Pac_-_101_-_Intro (1).mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4263-1vvbyfx>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "avatars" ("avatar_file", "created_at", "notes", "photo_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["avatar_file", "2Pac_-_101_-_Intro__1_.mp3"], ["created_at", Tue, 19 Jun 2012 15:15:22 UTC +00:00], ["notes", nil], ["photo_id", 36], ["updated_at", Tue, 19 Jun 2012 15:15:22 UTC +00:00]]
+  [1m[36m (21.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000localhost
+Completed 302 Found in 37ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (8.4ms)
+  Rendered avatars/_avatars_navigation.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:15:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:23:49 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[36mPhoto Load (7.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)[0m
+  [1m[35mAvatar Load (0.3ms)[0m  SELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)
+  Rendered avatars/index.html.erb within layouts/application (44.9ms)
+  Rendered avatars/_avatars_navigation.erb (2.6ms)
+Completed 200 OK in 371ms (Views: 214.8ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:50 -0600
+Served asset /everyday.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:50 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:50 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:50 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Processing by GalleriesController#index as HTML
+  [1m[36mGallery Load (8.3ms)[0m  [1mSELECT "galleries".* FROM "galleries" [0m
+  [1m[35mGallery Load (0.2ms)[0m  SELECT "galleries".* FROM "galleries" LIMIT 1
+  Rendered galleries/index.html.erb within layouts/application (5.9ms)
+  Rendered galleries/_galleries_navigation.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 39.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8" for 127.0.0.1 at 2012-06-19 09:23:57 -0600
+Processing by GalleriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."gallery_id" = 8
+  Rendered galleries/show.html.erb within layouts/application (66.0ms)
+  Rendered galleries/_galleries_navigation.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:58 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:23:58 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:58 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:23:58 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"gallery_id"=>"8"}
+  [1m[36mGallery Load (0.2ms)[0m  [1mSELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "galleries".* FROM "galleries" WHERE "galleries"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (gallery_id = 8)[0m
+  Rendered photos/index.html.erb within layouts/application (3.2ms)
+  Rendered photos/_photos_navigation.erb (0.9ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:00 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)
+  [1m[36mAvatar Load (0.1ms)[0m  [1mSELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)[0m
+  Rendered avatars/index.html.erb within layouts/application (2.9ms)
+  Rendered avatars/_avatars_navigation.erb (0.6ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:03 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries/8/photos/36/avatars/new" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Processing by AvatarsController#new as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered avatars/new.html.erb within layouts/application (2.2ms)
+  Rendered avatars/_avatars_navigation.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:06 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/galleries/36/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:24:24 -0600
+Processing by AvatarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KmFUNJzbixrBpKK2DjSogpSZs9N1E2vR4eIk3SpyXcc=", "avatar"=>{"avatar_file"=>#<ActionDispatch::Http::UploadedFile:0x007f98a24e79a0 @original_filename="Ella Fitzgerald - Someone To Watch Over Me.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"avatar[avatar_file]\"; filename=\"Ella Fitzgerald - Someone To Watch Over Me.mp3\"\r\nContent-Type: audio/mp3\r\n", @tempfile=#<File:/var/folders/yz/ds0c85px6574grmyxsc8qdcc0000gn/T/RackMultipart20120619-4340-1bycvuv>>}, "commit"=>"Upload file", "gallery_id"=>"36", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (188.9ms)[0m  [1mINSERT INTO "avatars" ("avatar_file", "created_at", "notes", "photo_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["avatar_file", "Ella_Fitzgerald_-_Someone_To_Watch_Over_Me.mp3"], ["created_at", Tue, 19 Jun 2012 15:24:25 UTC +00:00], ["notes", nil], ["photo_id", 36], ["updated_at", Tue, 19 Jun 2012 15:24:25 UTC +00:00]]
+  [1m[35m (353.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/galleries/8/photos/36/avatars
+Completed 302 Found in 2892ms (ActiveRecord: 542.3ms)
+
+
+Started GET "/galleries/8/photos/36/avatars" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Processing by AvatarsController#index as HTML
+  Parameters: {"gallery_id"=>"8", "photo_id"=>"36"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT 1  [["id", "36"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "avatars" WHERE (photo_id = 36)[0m
+  [1m[35mAvatar Load (0.1ms)[0m  SELECT "avatars".* FROM "avatars" WHERE (photo_id = 36)
+  Rendered avatars/index.html.erb within layouts/application (3.8ms)
+  Rendered avatars/_avatars_navigation.erb (0.9ms)
+Completed 200 OK in 159ms (Views: 157.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:24:27 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (3.5ms)
+  Rendered pages/_pages_navigation.html.erb (1.3ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Served asset /everyday.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:18 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 09:30:19 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (0.4ms)
+  Rendered pages/_pages_navigation.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:19 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:19 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (0.4ms)
+  Rendered pages/_pages_navigation.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:30:20 -0600
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.erb within layouts/application (0.5ms)
+  Rendered pages/_pages_navigation.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:35 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/galleries" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Processing by GalleriesController#index as HTML
+  [1m[36mGallery Load (12.7ms)[0m  [1mSELECT "galleries".* FROM "galleries" [0m
+  [1m[35mGallery Load (0.2ms)[0m  SELECT "galleries".* FROM "galleries" LIMIT 1
+  Rendered galleries/index.html.erb within layouts/application (30.5ms)
+  Rendered galleries/_galleries_navigation.erb (0.6ms)
+Completed 200 OK in 104ms (Views: 35.6ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/everyday.css?body=1" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Served asset /everyday.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-06-19 09:31:37 -0600
+Served asset /application.js - 304 Not Modified (0ms)
