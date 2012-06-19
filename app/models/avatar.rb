@@ -1,5 +1,5 @@
 class Avatar < ActiveRecord::Base
-  attr_accessible :avatar_file, :photo_id
+  attr_accessible :avatar_file, :photo_id, :notes
   belongs_to :photo
   #accepts_nested_attributes_for :photo
   

@@ -1,5 +1,8 @@
 <%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => {:multipart => true} do |f| %>
   <p>
+	<%= f.text_area :notes, :placeholder=>"Type your notes here. Note: this will not be saved." %>
+  </p>
+  <p>
     <label>My Avatar</label>
     <%= image_tag(@avatar.avatar_url) if @avatar.avatar_file? %>
     <%= f.file_field :avatar_file %>
