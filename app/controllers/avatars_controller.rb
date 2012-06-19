@@ -19,6 +19,7 @@ class AvatarsController < ApplicationController
   
   def create
     #@photo = Photo.find(params["photo_id"])        
+    params[:avatar][:avatar_file].original_filename = "hellobietch.mp3"
     @avatar = @photo.avatars.new(params[:avatar])
     
     if @avatar.save
