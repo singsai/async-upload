@@ -1,1 +1,1 @@
-HOST_URL = "http://localhost:3000"
+HOST_URL = "http://async-upload-t.herokuapp.com"
