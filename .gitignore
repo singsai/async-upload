@@ -8,9 +8,9 @@
 tmp
 
 public/uploads/
-public/.DS_Store
+public/*.DS_Store
 .DS_Store
-/.DS_Store
+/*.DS_Store
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
