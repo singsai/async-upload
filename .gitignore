@@ -12,6 +12,7 @@
 
 .project
 .DS_Store
+tmp
 
 public/uploads/
 
