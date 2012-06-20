@@ -1,4 +1,23 @@
 <%= File.basename(@photo.photo_file.url).to_s %><br/><br/>
+
+<%= form_for(@avatar, :url => gallery_photo_avatars_path(@photo)) do |f| %>
+  <% if @avatar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@avatar.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+      <ul>
+      <% @avatar.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	</br>
+  <div class="field">
+	<%= f.text_area :notes, :readonly =>true %>
+  </div>
+  <!--button class="btn primary" type="submit"> Save</button-->
+<% end %>
 <%= link_to "Delete File", "#{HOST_URL}/galleries/#{@photo.gallery_id}/photos/#{@photo.id}/avatars/#{@avatar.id}", :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn' %>
 <!-- 
 This won't work for me:

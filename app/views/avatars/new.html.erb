@@ -1,9 +1,9 @@
 <%= form_for @avatar, :url => gallery_photo_avatars_path(@photo), :html => {:multipart => true} do |f| %>
   <p>
-	<%= f.text_area :notes, :placeholder=>"Type your notes here. Note: this will not be saved." %>
+	<%= f.text_area :notes, :placeholder=>"Type your notes here. When you are finished recording your translation, upload your audio file by clicking on Browse, and then click the 'Upload file' button" %>
   </p>
   <p>
-    <label>My Avatar</label>
+    <label></label>
     <%= image_tag(@avatar.avatar_url) if @avatar.avatar_file? %>
     <%= f.file_field :avatar_file %>
   </p>

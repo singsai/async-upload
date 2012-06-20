@@ -29,8 +29,21 @@ class AvatarsController < ApplicationController
       #because @photo_id goes missing
     else
       render :json => { "errors" => @avatar.errors } 
+    end     
+  end
+
+  def update
+    @avatar = Avatar.find(params[:id])
+
+    respond_to do |format|
+      if @avatar.update_attributes(params[:avatar])
+        format.html { render action: 'show' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @avatar.errors, status: :unprocessable_entity }
+      end
     end
-     
   end
   
   def destroy
